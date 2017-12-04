@@ -3,8 +3,7 @@ import logo from './logo.svg';
 import PropTypes from 'prop-types';
 import './App.css';
 
-//Exam 1
-class Greeting extends React.Component {
+class VerifyTyping extends React.Component {
   render() {
     return (
       <h1>Hello, {this.props.name}</h1>
@@ -12,7 +11,7 @@ class Greeting extends React.Component {
   }
 }
 
-Greeting.propTypes = {
+VerifyTyping.propTypes = {
   //Exam 1
   name: PropTypes.string,
 
@@ -29,14 +28,6 @@ Greeting.propTypes = {
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-      console.log('Test');
-    }
   render() {
     return (
       <div className="App">
@@ -47,7 +38,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Greeting name={123} customProp="^__^"/>
+        <VerifyTyping name={123} customProp="^__^"/>
       </div>
     );
   }
